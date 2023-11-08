@@ -8,6 +8,7 @@ const ColorPanel = ({ colors, setColors }) => {
   let numColors = colors.length;
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     numColors = colors.length;
   }, [colors]);
 
