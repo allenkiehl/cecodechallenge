@@ -63,7 +63,11 @@ const ColorPanel = ({ colors, setColors }) => {
             }
           >
             {colors.map((color, index) => (
-              <Draggable key={index} draggableId={index} index={index}>
+              <Draggable
+                key={color.id + index}
+                draggableId={color.id + index}
+                index={index}
+              >
                 {(provided) => (
                   <div
                     ref={provided.innerRef}
